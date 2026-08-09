@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--muted:#6e6e6e;--paper:#f9f9f9;--line:#d9d9dc}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hanken Grotesk",sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:40px 22px 80px}
+h1{font-family:"Bodoni Moda",serif;font-size:46px;font-weight:500;margin:0 0 8px}
+.sub{color:var(--muted);margin-bottom:34px}
+.card{background:#fff;border:1px solid var(--line);padding:28px;margin-bottom:20px}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px}
+input[type=password],input[type=file]{width:100%;padding:13px;border:1px solid #bbb;background:#fff;font:inherit}
+button,a.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;background:#000;color:#fff;border:0;text-decoration:none;font:600 12px "Hanken Grotesk";letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+button.secondary,a.btn.secondary{background:#fff;color:#111;border:1px solid #aaa}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+#panel{display:none}.preview{width:100%;max-width:360px;aspect-ratio:3/4;object-fit:cover;display:block;margin-top:16px;filter:grayscale(1);background:#f3f3f4;border:1px solid var(--line)}
+.status{margin-top:14px;min-height:22px;font-size:14px}.note{font-size:13px;line-height:1.6;color:var(--muted)}
+.lock{font-size:64px;font-family:"Bodoni Moda",serif;margin-bottom:8px}
+.warning{font-size:12px;line-height:1.5;padding:12px;background:#f2f2f2;margin-top:18px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="lock">A &amp; A</div>
+  <h1>Invitation Admin</h1>
+  <p class="sub">Manage the couple portrait shown on the wedding invitation.</p>
+
+  <section class="card" id="loginCard">
+    <label for="password">Admin password</label>
+    <input id="password" type="password" placeholder="Enter admin password" autocomplete="current-password">
+    <div class="row"><button id="login">Sign in</button><a class="btn secondary" href="index.html">View invitation</a></div>
+    <p class="status" id="loginStatus"></p>
+    <p class="warning"><strong>Important:</strong> This GitHub Pages version stores the selected photo in this browser's local storage. It is not a secure server-side admin system and the changed photo will not automatically sync to other visitors' browsers. For true shared admin updates, connect the site to Firebase Storage/Auth or another backend.</p>
+  </section>
+
+  <section class="card" id="panel">
+    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:30px;margin-top:0">Couple Photo</h2>
+    <p class="note">Choose a JPG, PNG, or WebP photo. The invitation uses a 3:4 portrait crop and monochrome treatment.</p>
+    <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp">
+    <img id="preview" class="preview" alt="Current couple photo">
+    <div class="row">
+      <button id="save">Save Photo</button>
+      <button id="remove" class="secondary">Restore Default</button>
+      <a class="btn secondary" href="index.html">Open Invitation</a>
+    </div>
+    <p class="status" id="status"></p>
+  </section>
+</main>
+<script>
+const KEY="weddingCouplePhoto";
+const DEFAULT="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg";
+const PASSWORD="CHANGE-ME-2026";
+const loginCard=document.getElementById("loginCard");
+const panel=document.getElementById("panel");
+const password=document.getElementById("password");
+const loginStatus=document.getElementById("loginStatus");
+const status=document.getElementById("status");
+const preview=document.getElementById("preview");
+const input=document.getElementById("photoInput");
+
+function refresh(){
+  preview.src=localStorage.getItem(KEY)||DEFAULT;
+}
+document.getElementById("login").onclick=()=>{
+  if(password.value===PASSWORD){
+    loginCard.style.display="none"; panel.style.display="block"; refresh();
+  }else loginStatus.textContent="Incorrect admin password.";
+};
+password.addEventListener("keydown",e=>{if(e.key==="Enter")document.getElementById("login").click()});
+
+input.onchange=()=>{
+  const file=input.files[0];
+  if(!file)return;
+  if(file.size>8*1024*1024){status.textContent="Please choose an image smaller than 8 MB.";input.value="";return;}
+  const reader=new FileReader();
+  reader.onload=e=>{preview.src=e.target.result;preview.dataset.pending=e.target.result;status.textContent="Preview ready. Click Save Photo.";};
+  reader.readAsDataURL(file);
+};
+
+document.getElementById("save").onclick=()=>{
+  const data=preview.dataset.pending;
+  if(!data){status.textContent="Choose a new photo first.";return;}
+  try{
+    localStorage.setItem(KEY,data);
+    delete preview.dataset.pending;
+    status.textContent="Photo saved for this browser.";
+  }catch(e){status.textContent="Could not save this image. Try a smaller file."; }
+};
+document.getElementById("remove").onclick=()=>{
+  localStorage.removeItem(KEY); delete preview.dataset.pending; input.value=""; refresh();
+  status.textContent="Default photo restored.";
+};
+</script>
+</body>
+</html>
