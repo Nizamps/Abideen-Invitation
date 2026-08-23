@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Abideen &amp; Ayesha - Wedding Invitation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700&amp;family=Merriweather:wght@400;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#f4bd6e",
+                        "outline-variant": "#504538",
+                        "surface-container-highest": "#343533",
+                        "surface-container-high": "#2a2a28",
+                        "surface-container-lowest": "#0e0e0d",
+                        "surface-container-low": "#1b1c1a",
+                        "background": "#131412",
+                        "on-secondary": "#522122",
+                        "on-primary": "#452b00",
+                        "on-secondary-fixed": "#370d0f",
+                        "inverse-on-surface": "#30312e",
+                        "surface-bright": "#393937",
+                        "on-secondary-container": "#f0a5a4",
+                        "tertiary": "#ebbe96",
+                        "primary-fixed": "#ffddb2",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#d4c4b3",
+                        "inverse-primary": "#7f560f",
+                        "on-tertiary": "#462a0d",
+                        "surface-tint": "#f4bd6e",
+                        "on-background": "#e4e2de",
+                        "on-tertiary-fixed": "#2d1600",
+                        "tertiary-container": "#cca17b",
+                        "on-tertiary-fixed-variant": "#5f4021",
+                        "on-surface": "#e4e2de",
+                        "on-primary-container": "#573800",
+                        "outline": "#9c8f7f",
+                        "on-primary-fixed": "#291800",
+                        "on-secondary-fixed-variant": "#6d3737",
+                        "secondary-container": "#703939",
+                        "surface": "#131412",
+                        "secondary": "#ffb3b2",
+                        "surface-container": "#1f201e",
+                        "primary-container": "#d4a054",
+                        "inverse-surface": "#e4e2de",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131412",
+                        "tertiary-fixed-dim": "#ebbe96",
+                        "on-primary-fixed-variant": "#624000",
+                        "secondary-fixed": "#ffdad9",
+                        "surface-variant": "#343533",
+                        "tertiary-fixed": "#ffdcbf",
+                        "primary": "#d4a054",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb3b2",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#553819"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "button-text": ["Libre Franklin"],
+                        "body-md": ["Merriweather"],
+                        "headline-lg": ["Playfair Display"],
+                        "subheading-gold": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-caps": ["Libre Franklin"],
+                        "display-hero": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "button-text": ["14px", { "lineHeight": "1.0", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "subheading-gold": ["20px", { "lineHeight": "1.5", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-hero": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .arch-container {
+            border-top-left-radius: 999px;
+            border-top-right-radius: 999px;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .perspective-container {
+            perspective: 1000px;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+
+<style>
+  #midnight-stargaze-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  #shader-canvas-ANIMATION_12 {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  body > header,
+  body > main,
+  body > nav,
+  body > footer {
+    position: relative;
+    z-index: 2;
+  }
+
+  body {
+    position: relative;
+    background: transparent !important;
+  }
+
+  /* Preserve the supplied invitation while allowing the shader to show through. */
+  main::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #midnight-stargaze-bg { opacity: .9; }
+  }
+</style>
+
+
+<style id="midnight-stargaze-entire-page">
+  html, body {
+    background: transparent !important;
+    min-height: 100%;
+  }
+
+  body {
+    position: relative;
+  }
+
+  #midnight-stargaze-bg {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: -10 !important;
+    pointer-events: none !important;
+    display: block !important;
+  }
+
+  #shader-canvas-ANIMATION_12 {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+  }
+
+  body > *:not(#midnight-stargaze-bg) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Let the shader show through every major webpage section. */
+  header, main, section, nav, footer {
+    background: transparent !important;
+  }
+
+  /* Preserve readability while keeping the Stargaze visible underneath. */
+  .bg-\[\#1a1a1a\],
+  .bg-\[\#121212\],
+  .bg-\[\#111111\] {
+    background-color: rgba(26, 26, 26, 0.42) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Make large panels/cards translucent rather than opaque. */
+  [class*="rounded-xl"],
+  [class*="rounded-2xl"] {
+    background-color: rgba(26, 26, 26, 0.42);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  @media (max-width: 640px) {
+    #midnight-stargaze-bg {
+      height: 100dvh !important;
+    }
+  }
+</style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style id="luxury-arabic-dubai-typography">
+  :root {
+    --luxury-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --luxury-display: "Cinzel", "Times New Roman", serif;
+    --luxury-sans: "Libre Franklin", Arial, sans-serif;
+  }
+
+  /* Main names / elegant display typography */
+  .font-headline-lg-mobile,
+  .font-headline-lg,
+  .font-headline-md,
+  .font-display,
+  h1, h2, h3 {
+    font-family: var(--luxury-serif) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.015em;
+  }
+
+  /* Small luxury labels and navigation */
+  .font-label-md,
+  .font-label-sm,
+  .font-button-text,
+  nav,
+  button {
+    font-family: var(--luxury-display) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.12em;
+  }
+
+  /* Hero names: keep both names elegant and compact on mobile. */
+  .hero-name,
+  .display-hero,
+  [class*="text-display"] {
+    font-family: var(--luxury-serif) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  @media (max-width: 640px) {
+    /* Force the full name to stay on one line when possible. */
+    h1, h2 {
+      letter-spacing: 0 !important;
+    }
+
+    .hero-name,
+    .display-hero,
+    [class*="text-display"] {
+      font-size: clamp(2.0rem, 10.5vw, 3rem) !important;
+      line-height: 0.95 !important;
+      white-space: nowrap !important;
+    }
+
+    /* If a parent uses an explicit large headline utility, reduce it too. */
+    .text-display-lg,
+    .text-headline-lg,
+    .text-headline-lg-mobile {
+      font-size: clamp(1.9rem, 10vw, 2.8rem) !important;
+      line-height: 1 !important;
+    }
+
+    p {
+      letter-spacing: 0.01em;
+    }
+  }
+
+  @media (min-width: 641px) {
+    .hero-name,
+    .display-hero,
+    [class*="text-display"] {
+      font-size: clamp(3.2rem, 6vw, 6.5rem);
+      line-height: .95;
+    }
+  }
+
+  /* Give the invitation a refined editorial / Dubai luxury feel. */
+  main {
+    font-family: var(--luxury-sans);
+  }
+
+  main .font-body-md,
+  main .font-body-sm {
+    font-family: var(--luxury-sans) !important;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+  }
+
+  /* Gold headings get a little more breathing room. */
+  .text-primary {
+    text-shadow: 0 0 18px rgba(212,160,84,.10);
+  }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&display=swap" rel="stylesheet">
+
+
+<style id="supplied-aa-logo">
+  .aa-monogram {
+    display: block;
+    width: clamp(110px, 24vw, 165px);
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    filter: drop-shadow(0 8px 16px rgba(212,160,84,.16));
+  }
+
+  header .aa-monogram,
+  main .aa-monogram,
+  footer .aa-monogram {
+    flex: 0 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .aa-monogram {
+      width: 112px;
+    }
+  }
+</style>
+
+</head>
+<body class="text-on-surface font-body-md overflow-x-hidden antialiased">
+<!-- MIDNIGHT STARGAZE SHADER BACKGROUND -->
+<div id="midnight-stargaze-bg" aria-hidden="true">
+  <canvas id="shader-canvas-ANIMATION_12"></canvas>
+</div>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_12');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+float noise(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec2 p = (uv - 0.5) * 2.0;
+    p.x *= u_resolution.x / u_resolution.y;
+
+    // Deep luxury dark background
+    vec3 color1 = vec3(0.04, 0.04, 0.04); // #0a0a0a
+    vec3 color2 = vec3(0.08, 0.07, 0.05); // Subtle gold hint in darks
+    vec3 bg = mix(color1, color2, length(p) * 0.5);
+
+    // Flowing liquid gold silk effect
+    float silk = 0.0;
+    for(float i = 1.0; i < 4.0; i++) {
+        silk += sin(p.x * i * 1.5 + u_time * 0.5 + p.y * i) * 0.1 / i;
+        silk += cos(p.y * i * 1.2 - u_time * 0.4 + p.x * i) * 0.1 / i;
+    }
+    
+    vec3 goldBase = vec3(0.83, 0.63, 0.33); // #d4a054
+    vec3 finalColor = bg + goldBase * silk * 0.3;
+
+    // Twinkling stars (more subtle)
+    float n = noise(uv * 200.0);
+    float twinkle = sin(u_time * 1.5 + n * 100.0) * 0.5 + 0.5;
+    if (n > 0.998) {
+        finalColor += vec3(1.0, 0.9, 0.7) * twinkle;
+    }
+
+    // Mouse glow
+    float dist = length(uv - (u_mouse / u_resolution));
+    finalColor += goldBase * (1.0 - smoothstep(0.0, 0.4, dist)) * 0.15;
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+
+<!-- Top Navigation (Mobile Hidden, Desktop Shows Cluster) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-4 /80 backdrop-blur-md dark:/80 border-b-[0.5px] border-primary/30 shadow-sm shadow-primary/10 hidden md:flex">
+<div class="flex items-center gap-4 text-primary dark:text-primary-fixed-dim">
+<img src="aa-logo.png" alt="Abideen & Ayesha monogram" class="aa-monogram" />
+</div>
+<nav class="flex gap-6">
+<a class="text-primary font-bold font-label-caps text-label-caps hover:text-primary-fixed hover:bg-surface-container-low transition-colors px-3 py-2 rounded" href="#">Home</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed hover:bg-surface-container-low transition-colors px-3 py-2 rounded" href="#events">Events</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed hover:bg-surface-container-low transition-colors px-3 py-2 rounded" href="#venue">Venue</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed hover:bg-surface-container-low transition-colors px-3 py-2 rounded" href="#rsvp">RSVP</a>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-max-width mx-auto">
+<!-- Section 1: Hero -->
+<section class="min-h-screen flex flex-col items-center justify-center relative p-margin-mobile text-center fade-up perspective-container">
+<!-- Decorative Garland Background (Simulated via gradient/borders in this constraint) -->
+<div class="absolute top-0 w-full h-32 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent pointer-events-none"></div>
+<div class="mb-4 text-primary">
+<img src="aa-logo.png" alt="Abideen & Ayesha monogram" class="aa-monogram" />
+</div>
+<p class="font-subheading-gold text-subheading-gold text-primary mb-4 italic text-sm">Bismillah hir-Rahman nir-Raheem</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest mb-2 uppercase text-xs">Palimura Shabuddin</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest mb-12 uppercase text-[10px]">(S/o. Late Janab Palimura Salahuddin)</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest mb-12 uppercase">Cordially invite your esteemed presence on the auspicious occasion of the marriage of my brother,</p>
+<div class="relative flex flex-col items-center justify-center p-8 mb-16 transform-style-3d hover:rotate-y-12 transition-transform duration-700">
+<h1 class="hero-name font-display-hero text-display-hero text-primary z-10 text-shadow-sm shadow-primary/50 mb-2">Abideen PS</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest mb-4 uppercase text-[10px]">(P.G. S/o. Late Janab P. Abdul Jaleel Saheb)<br/>(M. G. S/o. Late Janab G. Mohammed Yaqoob Saheb)</p>
+<p class="font-subheading-gold text-subheading-gold text-primary mb-4 italic">With</p>
+<h1 class="hero-name font-display-hero text-display-hero text-primary z-10 text-shadow-sm shadow-primary/50 mb-2">Ayesha Siddiqua</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase text-[10px]">D/o MR &amp; MRS Mohammed Fayazuddin (MBS Daily Service)<br/>(P. G. Dr. Late Mohammed Nooruddin Saheb)<br/>(M.G. Dr. Mrs. Janab Abdul Basheer Saheb)</p>
+</div>
+<button class="mt-8 flex flex-col items-center gap-2 text-primary hover:text-primary-fixed transition-colors" onclick="document.getElementById('welcome').scrollIntoView({behavior: 'smooth'})">
+<span class="font-button-text text-button-text">Scroll to Enter</span>
+<span class="material-symbols-outlined animate-bounce">keyboard_arrow_down</span>
+</button>
+</section>
+<!-- Section 2: Welcome / Valima Focus -->
+<section class="min-h-screen flex flex-col items-center justify-center p-margin-mobile py-24 fade-up" id="welcome">
+<div class="w-full max-w-md arch-container bg-[#1a1a1a] border border-primary/30 p-2 shadow-[0_0_40px_rgba(212,160,84,0.15)] relative overflow-hidden group transform transition-transform duration-500 hover:scale-[1.02]">
+<!-- Inner Glow -->
+<div class="absolute inset-0 shadow-[inset_0_0_20px_rgba(212,160,84,0.1)] arch-container pointer-events-none z-10"></div>
+<div class="arch-container overflow-hidden w-full h-96 relative bg-surface">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A luxurious black and gold themed wedding invitation background." style="background-image: url('invitation-card.jpg')"></div>
+</div>
+<div class="p-8 text-center bg-[#1a1a1a] relative z-20">
+<p class="font-subheading-gold text-subheading-gold text-primary mb-2 italic">Insha Allah</p>
+<h2 class="font-display-hero text-headline-lg-mobile text-primary mb-4">{ Valima }</h2>
+<div class="flex justify-center mt-6">
+<div class="w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Starry Invitation & Countdown (Wrapped in Shader Container) -->
+<div class="relative w-full">
+
+<section class="min-h-screen relative z-10 flex flex-col items-center justify-center p-margin-mobile py-24 text-center fade-up /50 backdrop-blur-sm">
+<div class="flex items-center gap-4 mb-8 text-primary">
+<span class="material-symbols-outlined">light</span>
+<h3 class="font-subheading-gold text-subheading-gold text-primary">Monday, 19 October 2026</h3>
+<span class="material-symbols-outlined">light</span>
+</div>
+<div class="space-y-2 mb-12">
+<p class="font-label-caps text-label-caps text-primary tracking-widest">7 Jamadil-ul-awal 1448-H</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">At 7:30 PM onwards</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface max-w-lg mb-16 italic opacity-90 leading-relaxed">
+                    "We request the pleasure of your gracious presence and blessings."
+                </p>
+<!-- Countdown -->
+<div class="grid grid-cols-4 gap-4 w-full max-w-md">
+<div class="flex flex-col items-center justify-center bg-[#1a1a1a]/80 border border-primary/20 rounded-lg p-4 backdrop-blur-md shadow-lg relative overflow-hidden transform transition-transform hover:-translate-y-1">
+<div class="absolute inset-0 bg-primary/5"></div>
+<span class="font-headline-lg text-headline-lg text-primary relative z-10" id="days">00</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[10px] relative z-10 mt-1">DAYS</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#1a1a1a]/80 border border-primary/20 rounded-lg p-4 backdrop-blur-md shadow-lg relative overflow-hidden transform transition-transform hover:-translate-y-1">
+<div class="absolute inset-0 bg-primary/5"></div>
+<span class="font-headline-lg text-headline-lg text-primary relative z-10" id="hours">00</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[10px] relative z-10 mt-1">HOURS</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#1a1a1a]/80 border border-primary/20 rounded-lg p-4 backdrop-blur-md shadow-lg relative overflow-hidden transform transition-transform hover:-translate-y-1">
+<div class="absolute inset-0 bg-primary/5"></div>
+<span class="font-headline-lg text-headline-lg text-primary relative z-10" id="mins">00</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[10px] relative z-10 mt-1">MINS</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#1a1a1a]/80 border border-primary/20 rounded-lg p-4 backdrop-blur-md shadow-lg relative overflow-hidden transform transition-transform hover:-translate-y-1">
+<div class="absolute inset-0 bg-primary/5"></div>
+<span class="font-headline-lg text-headline-lg text-primary relative z-10" id="secs">00</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[10px] relative z-10 mt-1">SECS</span>
+</div>
+</div>
+</section>
+<!-- Section 4: Ceremony & Flow -->
+<section class="min-h-screen relative z-10 flex flex-col items-center p-margin-mobile py-24 fade-up /50 backdrop-blur-sm" id="events">
+<div class="text-center mb-16">
+<div class="flex justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-display-hero">favorite</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Events</h2>
+</div>
+<div class="w-full max-w-4xl grid md:grid-cols-2 gap-8">
+<!-- Nikah Event -->
+<div class="bg-[#1a1a1a]/80 backdrop-blur-md border border-primary/20 rounded-xl overflow-hidden shadow-lg transform transition-transform hover:-translate-y-2">
+<div class="h-64 w-full relative overflow-hidden">
+<div class="absolute inset-0 parallax-bg" style="background-image: url('nikah-venue.jpg'); background-attachment: scroll;"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="p-8 text-center relative z-10 border-t border-primary/20">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Nikah</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 opacity-80">Sunday, 18 October 2026<br/>At 7:30 PM onwards</p>
+<a href="https://maps.app.goo.gl/fuzoV7ZsjsmR78Qo7" target="_blank" rel="noopener noreferrer"
+   class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-button-text text-button-text py-3 px-7 rounded-full hover:bg-primary-fixed transition-colors">
+  <span class="material-symbols-outlined text-sm">location_on</span>
+  VIEW LOCATION
+</a>
+</div>
+</div>
+<!-- Valima Event -->
+<div class="bg-[#1a1a1a]/80 backdrop-blur-md border border-primary/20 rounded-xl overflow-hidden shadow-lg transform transition-transform hover:-translate-y-2">
+<div class="h-64 w-full relative overflow-hidden">
+<div class="absolute inset-0 parallax-bg" style="background-image: url('valima-venue.jpg'); background-attachment: scroll;"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="p-8 text-center relative z-10 border-t border-primary/20">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Valima</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 opacity-80">Monday, 19 October 2026<br/>At 7:30 PM onwards</p>
+<a href="https://maps.app.goo.gl/vGhF3boHjoSXJU7HA" target="_blank" rel="noopener noreferrer"
+   class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-button-text text-button-text py-3 px-7 rounded-full hover:bg-primary-fixed transition-colors">
+  <span class="material-symbols-outlined text-sm">location_on</span>
+  VIEW LOCATION
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Section 5: Venue -->
+<section class="min-h-screen flex flex-col items-center justify-center p-margin-mobile py-24 fade-up" id="venue">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase mb-12 text-center">Where &amp; When — The Venue</h2>
+
+<div class="w-full max-w-2xl bg-[#1a1a1a] border border-primary/20 rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(212,160,84,0.1)] mb-8">
+  <div class="h-64 w-full relative overflow-hidden">
+    <div class="absolute inset-0 parallax-bg" style="background-image: url('nikah-venue.jpg'); background-attachment: scroll;"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] to-transparent/50"></div>
+  </div>
+  <div class="p-8 text-center flex flex-col items-center">
+    <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">NIKAH</h3>
+    <p class="font-body-md text-body-md text-on-surface-variant opacity-80 mb-8 max-w-sm">Nikah Ceremony Venue</p>
+    <a href="https://maps.app.goo.gl/fuzoV7ZsjsmR78Qo7" target="_blank" rel="noopener noreferrer"
+       class="bg-primary/20 border border-primary text-primary font-button-text text-button-text py-3 px-8 rounded-full hover:bg-primary hover:text-black transition-colors flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm">navigation</span>
+      GET DIRECTIONS
+    </a>
+  </div>
+</div>
+<div class="w-full max-w-2xl bg-[#1a1a1a] border border-primary/20 rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(212,160,84,0.1)]">
+<!-- Map Image Placeholder -->
+<div class="h-64 w-full relative overflow-hidden">
+<div class="absolute inset-0 parallax-bg" style="background-image: url('valima-venue.jpg'); background-attachment: scroll;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] to-transparent/50"></div>
+</div>
+<div class="p-8 text-center flex flex-col items-center">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">STAR PALACE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 mb-8 max-w-sm">Thani Sandra Main Road,<br/>HBR Layout, Bengaluru</p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<a href="https://maps.app.goo.gl/vGhF3boHjoSXJU7HA" target="_blank" rel="noopener noreferrer"
+class="bg-primary/20 border border-primary text-primary font-button-text text-button-text py-3 px-8 rounded-full hover:bg-primary hover:text-black transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">navigation</span>
+                            GET DIRECTIONS
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (Mobile Only, Desktop Hidden) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 /95 backdrop-blur-xl dark:/95 border-t-[0.5px] border-primary/20 shadow-[0_-4px_20px_rgba(0,0,0,0.8)] rounded-t-xl md:hidden">
+<a class="flex flex-col items-center justify-center bg-primary/20 text-primary rounded-full p-3 hover:text-primary transition-all duration-300 translate-y-[-2px] transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant p-3 hover:text-primary transition-all duration-300" href="#events">
+<span class="material-symbols-outlined">event</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant p-3 hover:text-primary transition-all duration-300" href="#venue">
+<span class="material-symbols-outlined">location_on</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline-variant p-3 hover:text-primary transition-all duration-300" href="#rsvp">
+<span class="material-symbols-outlined">favorite</span>
+</a>
+</nav>
+<!-- Footer Component -->
+<footer class="w-full flex flex-col items-center gap-6 px-margin-mobile border-t border-primary/20  dark: full-width py-12 mb-20 md:mb-0 relative" id="rsvp">
+<div class="absolute top-0 w-full h-px bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/30 via-transparent to-transparent"></div>
+<img src="aa-logo.png" alt="Abideen & Ayesha monogram" class="aa-monogram" />
+<p class="text-on-surface-variant font-body-md text-body-md italic text-center text-sm">Best Compliments From:<br/>Nizamuddin P.S. &amp; Relatives</p>
+<div class="flex items-center gap-2 mt-4 px-4 py-2 bg-[#1a1a1a] border border-primary/20 rounded-full cursor-pointer hover:bg-primary/10 transition-colors" onclick="alert('Hashtag copied!')">
+<span class="font-label-caps text-label-caps text-primary">#AbideenWedsAyesha</span>
+<span class="material-symbols-outlined text-primary text-sm">content_copy</span>
+</div>
+<p class="text-on-surface-variant text-xs mt-8">2026</p>
+</footer>
+<script>
+        // Intersection Observer for fade-up animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Countdown to Oct 19, 2026
+        const targetDate = new Date("October 19, 2026 19:30:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days.toString().padStart(2, '0');
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('mins').innerText = mins.toString().padStart(2, '0');
+                document.getElementById('secs').innerText = secs.toString().padStart(2, '0');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body></html>
